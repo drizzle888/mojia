@@ -692,7 +692,7 @@ layui.define(['jquery'], function(exports) {
 				}
 			},
 			'video': function(str) {
-				return $(str).attr('data-pass') == 1 ? mojia.base64.decode($(str).attr('data-play').substring(3)) : $(str).attr('data-play');
+				return $(str).attr('data-pass') == 1 ? mojia.base64.decode($(str).attr('data-play').substring(3)) + '&next=' + attr('data-next') : $(str).attr('data-play') + '&next=' + attr('data-next');
 			},
 			'iframe': function(str, parse) {
 				mojia.player.logo('iframe', str);
